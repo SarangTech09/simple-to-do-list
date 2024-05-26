@@ -1,3 +1,4 @@
+
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
@@ -40,3 +41,7 @@ Add some meta info of your built firmware (such as firmware architecture and ins
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE) © P3TERX
+=======
+# simple-to-do-list
+Combined changes from both branches.
+
