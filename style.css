@@ -14,20 +14,18 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  background: url(background.jpg) no-repeat;
-  background-position: center;
+  background: url(background.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .container {
-  width: 400px;
-  height: auto;
+  width: 90%;
+  max-width: 400px;
   min-height: 400px;
   padding: 30px;
   background: transparent;
   border: 2px solid #e6b7eca1;
   border-radius: 10px;
-  /*backdrop-filter: blur(15px);*/
 }
 
 h1 {
@@ -99,7 +97,7 @@ h1 {
 }
 
 .todo:hover {
-  background-color:#e6b7eca1;
+  background-color: #e6b7eca1;
 }
 
 .todo label {
@@ -132,27 +130,26 @@ input[type='checkbox'] {
 }
 
 input:checked + span {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
-.todo:hover input:checked + span::before, 
+.todo:hover input:checked + span::before,
 input:checked + span::before {
   background: url(checked.svg) 60% 50% no-repeat #09bb21;
-  background-size: contain; /* Ensure the image scales to fit */
+  background-size: contain;
   border-color: #09bb21;
-  content: ""; /* Ensure the pseudo-element is generated */
-  display: inline-block; /* Make sure it takes up space */
-  width: 20px; /* Adjust size as needed */
-  height: 20px; /* Adjust size as needed */
-  border-radius: 50%; /* Ensure it's a circle */
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
-
 
 .todo:hover span::before {
   border-color: #eee;
 }
 
-.todo .delete-btn  {
+.todo .delete-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -160,25 +157,25 @@ input:checked + span::before {
   font-size: 24px;
 }
 
-.todos-container  {
+.todos-container {
   height: 300px;
   overflow: overlay;
 }
 
-.todos-container::-webkit-scrollbar-track  {
+.todos-container::-webkit-scrollbar-track {
   background: rgb(247, 247, 247);
-  border-radius: 20px
+  border-radius: 20px;
 }
 
-.todos-container::-webkit-scrollbar  {
+.todos-container::-webkit-scrollbar {
   width: 0;
 }
 
-.todos-container:hover::-webkit-scrollbar  {
+.todos-container:hover::-webkit-scrollbar {
   width: 7px;
 }
 
-.todos-container::-webkit-scrollbar-thumb  {
+.todos-container::-webkit-scrollbar-thumb {
   background: #d5d5d5;
   border-radius: 20px;
 }
@@ -213,4 +210,58 @@ input:checked + span::before {
 .delete-all:hover {
   border-radius: 5px;
   background-color: #e6b7eca1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .todo-input {
+    font-size: 14px;
+    padding: 8px 8px 8px 16px;
+  }
+
+  .add-button {
+    font-size: 28px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .todo {
+    padding: 8px 10px;
+  }
+
+  .delete-btn {
+    font-size: 20px;
+  }
+
+  .filter {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-input {
+    font-size: 12px;
+    padding: 6px 6px 6px 14px;
+  }
+
+  .add-button {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .todo {
+    padding: 6px 8px;
+  }
+
+  .delete-btn {
+    font-size: 18px;
+  }
+
+  .filter {
+    padding: 5px 8px;
+  }
 }
